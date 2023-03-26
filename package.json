@@ -1,16 +1,24 @@
 {
   "name": "rollup-plugin-chrome-extensions-hmr",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "基于rollup/vite开发的浏览器插件热更新插件",
   "type": "module",
-  "main": "./dist/index.cjs.js",
+  "main": "./dist/index.esm.js",
   "module": "./dist/index.esm.js",
-  "types": "./dist/index.d.ts",
+  "types": "./dist/types/src/index.d.ts",
+  "author": "happy_boy_zhao",
+  "keywords": ["chrome-extensions", "hmr", "rollup-plugin"],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zhangrunzhao/rollup-plugin-chrome-extensions-hmr.git"
+  },
+  "bugs": "https://github.com/zhangrunzhao/rollup-plugin-chrome-extensions-hmr/issues",
+  "license": "ISC",
   "files": [
     "dist"
   ],
   "scripts": {
-    "dev": "rollup -w -c",
+    "dev": "rollup -w -c rollup.config.ts --configPlugin typescript",
     "build": "rollup --config rollup.config.ts --configPlugin typescript"
   },
   "husky": {
@@ -31,9 +39,6 @@
       "git add"
     ]
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "devDependencies": {
     "@commitlint/cli": "^17.5.0",
     "@commitlint/config-conventional": "^17.4.4",
