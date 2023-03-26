@@ -1,0 +1,58 @@
+{
+  "name": "rollup-publish-env",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "./dist/index.cjs.js",
+  "module": "./dist/index.esm.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "rollup -w -c",
+    "build": "rollup -c",
+    "prepublish": "yarn version && yarn build"
+  },
+  "husky": {
+  "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "lint-staged": {
+    "*.{ts,js}": [
+      "node --max_old_space_size=8192 ./node_modules/.bin/prettier -w",
+      "node --max_old_space_size=8192 ./node_modules/.bin/eslint --fix --color",
+      "git add"
+    ]
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@commitlint/cli": "^17.5.0",
+    "@commitlint/config-conventional": "^17.4.4",
+    "@rollup/plugin-commonjs": "^24.0.1",
+    "@rollup/plugin-node-resolve": "^15.0.1",
+    "@rollup/plugin-typescript": "^11.0.0",
+    "eslint": "^8.0.1",
+    "husky": "3.1.0",
+    "lint-staged": "^13.2.0",
+    "prettier": "^2.8.7",
+    "rollup": "^3.20.2",
+    "typescript": "^5.0.2"
+  },
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.43.0",
+    "eslint-config-standard-with-typescript": "^34.0.1",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-n": "^15.0.0",
+    "eslint-plugin-promise": "^6.0.0"
+  }
+}
