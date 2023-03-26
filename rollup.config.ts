@@ -1,8 +1,9 @@
 import resolve from '@rollup/plugin-node-resolve';
 import typescript from '@rollup/plugin-typescript';
 import commonjs from '@rollup/plugin-commonjs';
+import { RollupOptions } from 'rollup';
 
-export default [
+const configs: RollupOptions[] = [
   {
     input: './src/index.ts',
     output: {
@@ -11,7 +12,8 @@ export default [
       entryFileNames: '[name].cjs.js',
     },
     plugins: [resolve(), commonjs(), typescript()],
-  }, {
+  },
+  {
     input: './src/index.ts',
     output: {
       dir: 'dist',
@@ -19,5 +21,7 @@ export default [
       entryFileNames: '[name].esm.js',
     },
     plugins: [resolve(), commonjs(), typescript()],
-  }
+  },
 ];
+
+export default configs;

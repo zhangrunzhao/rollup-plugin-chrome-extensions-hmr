@@ -1,17 +1,23 @@
 {
-  "include": [
-    "src/",
-    "types/"
-  ],
+  "include": ["src", "types", "rollup.config.ts"],
+	"exclude": ["dist", "node_modules"],
   "compilerOptions": {
-    "target": "es6",
-    "module": "es6",
-    "lib": ["DOM", "ES2015"],
+    "allowSyntheticDefaultImports": true,
+		"forceConsistentCasingInFileNames": true,
+		"isolatedModules": true,
+    "lib": ["ES6", "DOM"],
+		"module": "ES6",
+		"moduleResolution": "Node",
+		"noEmitOnError": true,
+		"noUnusedParameters": true,
+		"pretty": true,
+		"resolveJsonModule": true,
+		"skipLibCheck": true,
+		"strict": true,
+		"target": "ES6",
+		"useDefineForClassFields": false,
     "declaration": true,
-    "declarationDir": "./dist",
-    "strict": true,
+    "declarationDir": "dist/types",
     "esModuleInterop": true,
-    "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true
-  }           
+  }      
 }
