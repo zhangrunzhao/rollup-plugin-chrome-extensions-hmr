@@ -23,7 +23,6 @@ specifiers:
   ws: ^8.13.0
 
 dependencies:
-  rollup: 3.20.2
   ws: 8.13.0
 
 devDependencies:
@@ -43,6 +42,7 @@ devDependencies:
   husky: 3.1.0
   lint-staged: 13.2.0
   prettier: 2.8.7
+  rollup: 3.20.2
   tslib: 1.14.1
   typescript: 5.0.2
 
@@ -1657,6 +1657,7 @@ packages:
     engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
     os: [darwin]
     requiresBuild: true
+    dev: true
     optional: true
 
   /function-bind/1.1.1:
@@ -2859,6 +2860,7 @@ packages:
     hasBin: true
     optionalDependencies:
       fsevents: 2.3.2
+    dev: true
 
   /run-node/1.0.0:
     resolution: {integrity: sha512-kc120TBlQ3mih1LSzdAJXo4xn/GWS2ec0l3S+syHDXP9uRr0JAT8Qd3mdMuyjqCzeZktgP3try92cEgf9Nks8A==}

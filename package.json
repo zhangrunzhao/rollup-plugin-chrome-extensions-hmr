@@ -1,6 +1,6 @@
 {
   "name": "rollup-plugin-chrome-extensions-hmr",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "基于rollup/vite开发的浏览器插件热更新插件",
   "main": "./dist/index.cjs.js",
   "module": "./dist/index.esm.js",
@@ -56,10 +56,10 @@
     "prettier": "^2.8.7",
     "typescript": "*",
     "tslib": "^1.7.1",
-    "@types/ws": "^8.5.4"
+    "@types/ws": "^8.5.4",
+    "rollup": "^3.20.2"
   },
   "dependencies": {
-    "ws": "^8.13.0",
-    "rollup": "^3.20.2"
+    "ws": "^8.13.0"
   }
 }
