@@ -6,6 +6,15 @@ const configs: RollupOptions[] = [
     input: './src/index.ts',
     output: {
       dir: 'dist',
+      format: 'cjs',
+      entryFileNames: '[name].cjs.js',
+    },
+    plugins: [typescript()],
+  },
+  {
+    input: './src/index.ts',
+    output: {
+      dir: 'dist',
       format: 'esm',
       entryFileNames: '[name].esm.js',
     },

@@ -1,7 +1,8 @@
 # rollup-plugin-chrome-extensions-hmr
+用于 rollup 或者 vite 来开发浏览器插件的热更新插件，只要你有的项目中有 background 模块，用它就完事了（用不了的话辛苦发下issue，我看到会处理的）。
 rollup/vite based on the development of browser hmr plugin
 
-# 1.0.3
+# 1.0.4
 Complete the business code automatic generation, you just in use
 
 ```
@@ -13,7 +14,8 @@ export default {
   ....
   plugins: [
     chromeExtensionsHmr{
-    backgroundPath: path.resolve(pagesDir, "background", "index.ts")
+      backgroundPath: path.resolve(pagesDir, "background", "index.ts"),
+      needWatchMode: true
     }
   ]
 }
