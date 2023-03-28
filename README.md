@@ -1,13 +1,33 @@
-基于 rollup/vite 开发浏览器插件的热更新插件
+# rollup-plugin-chrome-extensions-hmr
+rollup/vite based on the development of browser hmr plugin
+
+# 1.0.3
+Complete the business code automatic generation, you just in use
+
+```
+// vite.config.js or rollup.config.js
+import chromeExtensionsHmr from 'rollup-plugin-chrome-extensions-hmr';
+import { resolve } from "path";
+
+export default {
+  ....
+  plugins: [
+    chromeExtensionsHmr{
+    backgroundPath: path.resolve(pagesDir, "background", "index.ts")
+    }
+  ]
+}
+```
+
 
 # 1.0.0
-你必须在使用时在 background.js 中添加以下代码
+You must add the following code to background.js when using
 
 ```
 const ws = new WebSocket('ws://localhost:7788');
-  ws.onmessage = (event) => {
+ws.onmessage = (event) => {
   if (event.data === 'reload-extension') {
-  chrome.runtime.reload();
+    chrome.runtime.reload();
   }
 }
 ```

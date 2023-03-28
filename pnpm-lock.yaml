@@ -18,6 +18,7 @@ specifiers:
   lint-staged: ^13.2.0
   prettier: ^2.8.7
   rollup: ^3.20.2
+  tslib: ^1.7.1
   typescript: '*'
   ws: ^8.13.0
 
@@ -30,7 +31,7 @@ devDependencies:
   '@commitlint/config-conventional': 17.4.4
   '@rollup/plugin-commonjs': 24.0.1_rollup@3.20.2
   '@rollup/plugin-node-resolve': 15.0.1_rollup@3.20.2
-  '@rollup/plugin-typescript': 11.0.0_dpenfibtlqpfrulx5rm72ngxhu
+  '@rollup/plugin-typescript': 11.0.0_gazm5745lplkdmnewr2yylaqfy
   '@types/ws': 8.5.4
   '@typescript-eslint/eslint-plugin': 5.56.0_2hcjazgfnbtq42tcc73br2vup4
   '@typescript-eslint/parser': 5.56.0_j4766f7ecgqbon3u7zlxn5zszu
@@ -42,6 +43,7 @@ devDependencies:
   husky: 3.1.0
   lint-staged: 13.2.0
   prettier: 2.8.7
+  tslib: 1.14.1
   typescript: 5.0.2
 
 packages:
@@ -372,7 +374,7 @@ packages:
       rollup: 3.20.2
     dev: true
 
-  /@rollup/plugin-typescript/11.0.0_dpenfibtlqpfrulx5rm72ngxhu:
+  /@rollup/plugin-typescript/11.0.0_gazm5745lplkdmnewr2yylaqfy:
     resolution: {integrity: sha512-goPyCWBiimk1iJgSTgsehFD5OOFHiAknrRJjqFCudcW8JtWiBlK284Xnn4flqMqg6YAjVG/EE+3aVzrL5qNSzQ==}
     engines: {node: '>=14.0.0'}
     peerDependencies:
@@ -388,6 +390,7 @@ packages:
       '@rollup/pluginutils': 5.0.2_rollup@3.20.2
       resolve: 1.22.1
       rollup: 3.20.2
+      tslib: 1.14.1
       typescript: 5.0.2
     dev: true
 
